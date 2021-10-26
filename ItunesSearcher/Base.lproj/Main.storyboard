@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pTK-4r-6cu">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8Xc-yj-e9n">
+            <objects>
+                <tabBarController id="pTK-4r-6cu" sceneMemberID="viewController">
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yNZ-vp-jMo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4om-Lz-a3e" kind="relationship" relationship="viewControllers" id="RWY-lM-sfi"/>
+                        <segue destination="Kb2-5Q-tj6" kind="relationship" relationship="viewControllers" id="QfX-Zz-yu3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNK-z0-RwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1084" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ghf-kF-nAl">
+            <objects>
+                <navigationController id="4om-Lz-a3e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="nav-pA-osW">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oaa-5D-qih">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RcU-Sa-yqD" kind="relationship" relationship="rootViewController" id="FYv-b7-QYB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzK-lY-VLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-150" y="70"/>
+        </scene>
+        <!--Search Music View Controller-->
+        <scene sceneID="DYI-DL-KkC">
+            <objects>
+                <viewController id="RcU-Sa-yqD" customClass="SearchMusicViewController" customModule="ItunesSearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kg7-pX-oKv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rQj-Od-q4n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="olW-7m-JcZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJm-n6-Qit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="701.60000000000002" y="69.715142428785612"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lf1-G6-60S">
+            <objects>
+                <navigationController id="Kb2-5Q-tj6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="history" id="vPh-9c-uah">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jml-Op-0IP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aSZ-bi-1tT" kind="relationship" relationship="rootViewController" id="a8Z-NO-fRD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IvZ-8G-H4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="773"/>
+        </scene>
+        <!--Search History View Controller-->
+        <scene sceneID="rab-XU-C05">
+            <objects>
+                <viewController id="aSZ-bi-1tT" customClass="SearchHistoryViewController" customModule="ItunesSearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LeG-SH-WMM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ujs-At-qOY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HaS-pf-Fdo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1A-AM-lnd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="772"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="labelColor"/>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
