@@ -45,6 +45,7 @@ class SearchMusicInteractor: SearchMusicBusinessLogic, SearchMusicDataStore {
                     self.presenter?.presentAlert(error: CustomErrors.searchResultEmpty)
                     return
                 }
+                ImageDataLoader.shared.clearCache()
                 let userDefault = UserDefaults.standard
                 userDefault.addResultToSearchHistory(result: request.searchText)
                 

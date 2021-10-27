@@ -66,7 +66,7 @@ class SearchMusicViewController: UIViewController {
 
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        let itemSideSize = view.frame.width/2 - 20
+        let itemSideSize = view.frame.width/10
         layout.itemSize = CGSize(width: itemSideSize, height: itemSideSize + 80)
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)

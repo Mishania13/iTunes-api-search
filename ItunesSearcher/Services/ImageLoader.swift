@@ -10,14 +10,15 @@ import Foundation
 class ImageDataLoader {
 
     static let shared = ImageDataLoader()
-
     private let serialQueueForImagesData = DispatchQueue(label: "imagesData.queue", attributes: .concurrent)
     var loadedImages = [URL:Data]()
     private init() {}
     //TODO: Chek is session this url is running
-    //TODO: If will work with higer quality images need to do cash cleaner
+    func clearCache() {
+        loadedImages.removeAll()
+    }
     func loadImage(url: URL, _ complition: @escaping(Result<Data, Error>) -> Void) {
-        serialQueueForImagesData.sync {
+        serialQueueForImagesData.async {
             if let imageData = self.loadedImages[url] {
                 complition(.success(imageData))
             }
